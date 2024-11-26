@@ -27,7 +27,9 @@
             darwin.apple_sdk.frameworks.SystemConfiguration
           ];
 
-          env = {};
+          env = {
+            PORT = "8080";
+          };
 
           nativeBuildInputs = [toolchain];
 
