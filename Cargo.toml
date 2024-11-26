@@ -1,8 +1,11 @@
 [workspace]
-members = []
+members = ["client-bigtable"]
 resolver = "2"
 
 [workspace.dependencies]
+anyhow = "1.0.93"
+client-bigtable.path = "client-bigtable"
+gcloud-sdk = "0.25.8"
 
 [workspace.package]
 authors = ["pranc1ngpegasus"]

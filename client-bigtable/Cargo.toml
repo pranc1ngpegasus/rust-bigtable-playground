@@ -1,0 +1,13 @@
+[package]
+authors.workspace = true
+edition.workspace = true
+name = "client-bigtable"
+version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+gcloud-sdk.features = ["google-bigtable-v2", "google-type"]
+gcloud-sdk.workspace = true
+
+[lints]
+workspace = true

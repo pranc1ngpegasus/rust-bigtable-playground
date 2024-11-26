@@ -1,0 +1,14 @@
+services:
+  bigtable:
+    image: google/cloud-sdk:latest
+    command: gcloud beta emulators bigtable start --host-port 0.0.0.0:8086
+    environment:
+      - BIGTABLE_EMULATOR_HOST=0.0.0.0:8086
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "8086"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    platform: linux/amd64
+    ports:
+      - "8086:8086"
